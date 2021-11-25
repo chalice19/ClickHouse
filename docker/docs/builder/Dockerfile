@@ -3,8 +3,6 @@ FROM ubuntu:20.04
 
 ENV LANG=C.UTF-8
 
-RUN sed -i 's|http://archive|http://ru.archive|g' /etc/apt/sources.list
-
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install --yes --no-install-recommends \
             python3-setuptools \
